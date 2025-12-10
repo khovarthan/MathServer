@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Mileage Calculator</title>
+    <style>
+        body 
+        {
+            background: linear-gradient(rgb(0, 255, 251), black);
+        }
+        .id1 
+        {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .box 
+        {
+            text-align: center;
+            width: 30%;
+            background-color: red;
+            border: solid 3px black;
+            padding: 20px;
+            margin: 50px auto;
+        }
+        .result 
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h2><u>Mileage Calculator</u></h2>
+        <h3>KHOVARTHAN V (25012253)</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            <label>Distance Travelled</label>
+            <br>
+            <input type="number" name="distance"> km
+            <br>
+            <br>
+            <label>Liters Consumed</label>
+            <br>
+            <input type="number" name="liters"> L
+            <br>
+            <br>
+            <button type="submit">Calculate</button>
+            <br>
+            <br>
+            <label>Mileage</label>
+            <br>
+            <input class='result' type="number" name="Mileage" value={{miles}}>Km/L
+        </form>
+    </div>
+</body>
+</html>
